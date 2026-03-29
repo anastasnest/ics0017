@@ -39,4 +39,26 @@ add_executable(ics0017
         Practice3/Practice3_Ex4.cpp
         Practice3/Practice3_Ex5.cpp
         Practice3/Practice3_Ex6.cpp
-        Practice3/Practice3_Ex7.cpp)
+        Practice3/Practice3_Ex7.cpp
+        Practice5/Practice5_Ex1.cpp
+        Practice5/Practice5_Ex2.cpp
+        Practice5/Practice5_Ex3.cpp
+        Practice5/Practice5_Ex4.cpp
+        Practice5/Practice5_Ex5.cpp
+        Practice5/Practice5_Ex6.cpp
+        Practice6/Practice6_Ex1.cpp
+        Practice6/Practice6_Ex2.cpp
+        Practice6/Practice6_Ex3.cpp
+        Practice6/Practice6_Ex4.cpp
+        Practice6/Practice6_Ex5.cpp
+        Practice6/Practice6_Ex6.cpp
+        Practice6/Practice6_Ex7.cpp
+        Practice6/Practice6_Ex8.cpp
+        Practice6/Practice6_Ex9.cpp
+        Practice6/Practice6_Ex10.cpp
+        Practice6/Practice6_Ex11.cpp
+        Practice6/Practice6_Ex12.cpp
+        Practice7/Practice7_Ex1.cpp
+        Practice7/Practice7_Ex2.cpp
+        Practice7/Practice7_Ex3.cpp
+        Practice7/Practice7_Ex4.cpp)
