@@ -70,4 +70,5 @@ add_executable(ics0017
         Practice7/Practice7_Ex10.cpp
         Practice7/Practice7_Ex11.cpp
         Practice7/Practice7_Ex12.cpp
-        Practice7/Practice7_Ex13.cpp)
+        Practice7/Practice7_Ex13.cpp
+        SelfStudy/Test2_1.cpp)
