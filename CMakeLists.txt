@@ -61,4 +61,10 @@ add_executable(ics0017
         Practice7/Practice7_Ex1.cpp
         Practice7/Practice7_Ex2.cpp
         Practice7/Practice7_Ex3.cpp
-        Practice7/Practice7_Ex4.cpp)
+        Practice7/Practice7_Ex4.cpp
+        Practice7/Practice7_Ex5.cpp
+        Practice7/Practice7_Ex6.cpp
+        Practice7/Practice7_Ex7.cpp
+        Practice7/Practice7_Ex8.cpp
+        Practice7/Practice7_Ex9.cpp
+        Practice7/Practice7_Ex10.cpp)

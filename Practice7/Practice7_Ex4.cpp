@@ -16,6 +16,7 @@ public:
 class Gmail: public  Account {
 public:
     string domain = "@gmail.com";
+
     Gmail(string username, string pw) {
         account_id = username + domain;
         password = pw;
@@ -23,6 +24,7 @@ public:
 };
 
 int main() {
-
+    Gmail gmail("TalTech", "IT College");
+    gmail.display_info();
     return 0;
 }
