@@ -5,39 +5,36 @@ using namespace std;
 
 
 class Discount {
+protected:
+    double discount;
 public:
-
     virtual double apply_discount(double price) = 0;
 };
 
 class Percentage: public Discount {
-private:
-    double discount;
 public:
     Percentage(double new_discount) {
         discount = new_discount;
     }
-    double apply_discount(double price) {
+    double apply_discount(double price) override {
         double final_price = price * (1 - discount/100);
         return final_price;
     }
 };
 
 class Fixed: public Discount {
-private:
-    double discount;
 public:
     Fixed(double new_discount) {
         discount = new_discount;
     }
-    double apply_discount (double price) {
+    double apply_discount(double price) override {
         return price - discount;
     }
 };
 
 class NoDiscount : public Discount {
 public:
-    double apply_discount(double price) {
+    double apply_discount(double price) override {
         return price;
     }
 };
@@ -46,62 +43,65 @@ void error_message() {
     cout << "Error" << endl;
 }
 
-template<class T>
-T get_discount_type(string rule) {
+Discount* get_discount_type(string rule) {
     char type = rule[0];
+
     string numberPart = rule.substr(1);
     double value = 0.0;
     bool notEmpty;
+
     if (numberPart.empty()) {
-        error_message();
         notEmpty = false;
     } else {
-        value = stod(numberPart);
+        try {
+            value = stod(numberPart);
+        } catch (const invalid_argument&) {
+            return nullptr;
+        }
         notEmpty = true;
     }
 
     switch (type) {
         case 'P':
             if (notEmpty) {
-                return Percentage(value);
+                return new Percentage(value);
             }
             break;
         case 'F':
             if (notEmpty) {
-                return Fixed(value);
+                return new Fixed(value);
             }
             break;
         case 'N':
             if (!notEmpty) {
-                return NoDiscount();
+                return new NoDiscount();
             }
             break;
         default:
             break;
     }
-    return 0;
-}
-
-template<class T>
-double get_final_price(double price, string rule) {
-    T discount = get_discount_type(rule);
-    if (discount == 0) {
-        error_message();
-        return -1.0;
-    }
-    double final_price = discount.apply_discount(price);
-    return final_price;
-
+    return nullptr;
 }
 
 int main() {
     double price;
     string rule;
     cin >> price >> rule;
-    double finalPrice = get_final_price(price, rule);
-    if (finalPrice >= 0) {
-        cout << fixed << setprecision(2);
-        cout << finalPrice << endl;
+
+    Discount* pt = get_discount_type(rule);
+    if (!pt) {
+        error_message();
+        return 0;
     }
+
+    double finalPrice = pt->apply_discount(price);
+
+    if (finalPrice < 0 ) {
+        finalPrice = 0.0;
+    }
+
+    cout << fixed << setprecision(2);
+    cout << "Final Price = " << finalPrice << endl;
+
     return 0;
 }
