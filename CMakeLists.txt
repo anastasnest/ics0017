@@ -74,4 +74,13 @@ add_executable(ics0017
         SelfStudy/Test2_1.cpp
         SelfStudy/Test2_2.cpp
         SelfStudy/Test2_3.cpp
-        SelfStudy/Test2_4.cpp)
+        SelfStudy/Test2_4.cpp
+        Practice9/Practice9_Ex1.cpp
+        Practice9/Practice9_Ex2.cpp
+        Practice9/Practice9_Ex3.cpp
+        Practice9/Practice9_Ex4.cpp
+        Practice9/Practice9_Ex5.cpp
+        Practice9/Practice9_Ex6.cpp
+        Practice10/Practice10_Ex1.cpp
+        Practice10/Practice10_Ex2.cpp
+        Practice10/Practice10_Ex3.cpp)
