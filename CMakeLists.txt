@@ -84,4 +84,5 @@ add_executable(ics0017
         Practice10/Practice10_Ex1.cpp
         Practice10/Practice10_Ex2.cpp
         Practice10/Practice10_Ex3.cpp
-        Practice11/Practice11_Ex1.cpp)
+        Practice11/Practice11_Ex1.cpp
+        Practice11/Practice11_Ex2.cpp)
